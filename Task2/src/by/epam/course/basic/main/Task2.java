@@ -30,7 +30,9 @@ public class Task2 {
 			System.out.println("5. Find the card by bithday");
 			System.out.println("6. Delete a card");
 			System.out.println("7. Show all cards from the address book");
-			System.out.println("8. Exit from the application");
+			System.out.println("8. Sort by Name");
+			System.out.println("9. Sort by Phone Number");
+			System.out.println("10. Exit from the application");
 			
 			if (sc.hasNextInt()){
 				userInput = sc.nextInt();
@@ -101,12 +103,18 @@ public class Task2 {
 				book.showAllCards();
 				break;
 			case 8: 
+				book.sortByName();
+				break;
+			case 9: 
+				book.sortByNumber();
+				break;
+			case 10:
 				return;
 			default:
 				System.out.println("Specify the number from the list above");					
 			}
 				
-		} while (userInput != 8);
+		} while (userInput != 10);
 		
 	}
 

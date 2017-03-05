@@ -117,4 +117,34 @@ public class AddressBook {
 			return this.cards[i];
 		}
 	}
+	
+	public void setCard(PersonalCard card, int i){
+		cards[i] = card;
+	}
+	
+	public void sortByName(){
+		PersonalCard temp;
+		for (int i = 0; i < getCountCards()-1; i++){
+			for (int j = 1; j < getCountCards(); j++ ){
+				if (getCard(i).getName().compareTo(getCard(j).getName()) > 0){
+					temp = getCard(i);
+					setCard(getCard(j), i);
+					setCard(temp, j);
+				}
+			}
+		}
+	}
+	
+	public void sortByNumber(){
+		PersonalCard temp;
+		for (int i = 0; i < getCountCards()-1; i++){
+			for (int j = 1; j < getCountCards(); j++ ){
+				if (getCard(i).getNumber().compareTo(getCard(j).getNumber()) > 0){
+					temp = getCard(i);
+					setCard(getCard(j), i);
+					setCard(temp, j);
+				}
+			}
+		}
+	}
 }
