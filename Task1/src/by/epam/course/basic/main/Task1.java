@@ -8,15 +8,15 @@ import java.util.Calendar;
  *
  * @date 25 February 2017
  * 
- * Task: Используя код листинга 4 напишите приложение, выводящее на консоль календать на год.
+ * Task: Г€Г±ГЇГ®Г«ГјГ§ГіГї ГЄГ®Г¤ Г«ГЁГ±ГІГЁГ­ГЈГ  4 Г­Г ГЇГЁГёГЁГІГҐ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГҐ, ГўГ»ГўГ®Г¤ГїГ№ГҐГҐ Г­Г  ГЄГ®Г­Г±Г®Г«Гј ГЄГ Г«ГҐГ­Г¤Г ГІГј Г­Г  ГЈГ®Г¤.
  */
 public class Task1 {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) {// Р° РѕС‚РґРµР»СЊРЅС‹Рј РєР»Р°СЃСЃРѕРј СЂРµС€РµРЅРёРµ РѕС„РѕСЂРјРёС‚СЊ? С‡С‚РѕС‹ РїРѕС‚РѕРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РіРґРµ РЅР°РґРѕ, РЅСѓ, РёР»Рё РіРµРґ РЅРµ РЅР°РґРѕ))
 		GregorianCalendar d = new GregorianCalendar();
 		int today_day = d.get(Calendar.DAY_OF_MONTH);
 		int today_month = d.get(Calendar.MONTH);
-		String[] monthNames = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
+		String[] monthNames = {"ГџГ­ГўГ Г°Гј", "Г”ГҐГўГ°Г Г«Гј", "ГЊГ Г°ГІ", "ГЂГЇГ°ГҐГ«Гј", "ГЊГ Г©", "Г€ГѕГ­Гј", "Г€ГѕГ«Гј", "ГЂГўГЈГіГ±ГІ", "Г‘ГҐГ­ГІГїГЎГ°Гј", "ГЋГЄГІГїГЎГ°Гј", "ГЌГ®ГїГЎГ°Гј", "Г„ГҐГЄГ ГЎГ°Гј"};
 		
 		d.set(d.get(Calendar.YEAR) , 0, 1);
 			
@@ -27,7 +27,7 @@ public class Task1 {
 			
 			int month = d.get(Calendar.MONTH);
 			int weekday = d.get(Calendar.DAY_OF_WEEK);
-			System.out.println("Вс Пн Вт Ср Чт Пт Сб");
+			System.out.println("Г‚Г± ГЏГ­ Г‚ГІ Г‘Г° Г—ГІ ГЏГІ Г‘ГЎ");
 			for (int i = Calendar.SUNDAY; i < weekday; i++)
 				System.out.print("   ");
 			do {
